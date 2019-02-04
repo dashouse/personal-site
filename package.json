@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/dashouse/personal-site/issues"
   },
-  "homepage": "https://github.com/dashouse/personal-site/_site",
+  "homepage": "https://dashouse.github.io/personal-site/_site/index.html",
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1"
   }
