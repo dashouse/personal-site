@@ -1,0 +1,28 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Website of Dave House",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashouse/personal-site.git"
+  },
+  "keywords": [
+    "Dave",
+    "house",
+    "design",
+    "music"
+  ],
+  "author": "Dave House",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashouse/personal-site/issues"
+  },
+  "homepage": "https://github.com/dashouse/personal-site/_site",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.7.1"
+  }
+}
