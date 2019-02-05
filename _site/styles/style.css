@@ -501,21 +501,24 @@ article.post h2 a {
   display: block;
 }
 
-article.post h2 a:hover {
-  background-color: initial;
+@media (hover: hover) {
+  article.post h2 a:hover {
+    background-color: initial;
+  }
+  
+  article.post h2 a:hover:after  {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: 1rem;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  }
 }
 
-article.post h2 a:hover:after  {
-  content: "";
-  position: absolute;
-  left: -2rem;
-  top: 1rem;
-  width: 20px;
-  height: 20px;
-  background-color: #333;
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
 
 article.post .caption {
   font-family: 'Poppins', sans-serif;
