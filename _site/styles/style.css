@@ -235,19 +235,31 @@ ul.contact-list {
 }
 
 ul.contact-list li {
-  display: inline-block;
+  display: block;
   margin-bottom: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 0;
 }
 
-ul.contact-list li:after {
-  content: "•";
-  margin-left: 1rem;
+
+/* Large screen styles */
+
+@media screen and (min-width: 900px) {
+  ul.contact-list li {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+  }
+  
+  ul.contact-list li:after {
+    content: "•";
+    margin-left: 1rem;
+  }
+  
+  ul.contact-list li:last-child:after {
+    content: "";
+  }
 }
 
-ul.contact-list li:last-child:after {
-  content: "";
-}
 
 span.back-link {
   display: inline-block;
