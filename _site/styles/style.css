@@ -694,4 +694,27 @@ article.post h2 a:hover:after  {
   margin-bottom: 0;
 }
 
+/* Egg */
+.l, .r {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: -3rem;
+  text-align: center;
+  padding-top: 1rem;
+  background-color: white;
+  z-index: 1000;
+}
 
+.l {
+  left: 0;
+}
+
+.r {
+  right: 0
+}
