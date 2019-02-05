@@ -501,7 +501,9 @@ article.post h2 a {
   display: block;
 }
 
-@media (hover: hover) {
+/* Large screen styles */
+
+@media screen and (min-width: 900px) {
   article.post h2 a:hover {
     background-color: initial;
   }
@@ -581,22 +583,15 @@ article.post.post--external h2:after {
   border: 1px solid #3d99a3;
 }
 
-article.post h2 a:hover:after  {
-  content: "";
-  position: absolute;
-  left: -1.5rem;
-  top: 1.15rem;
-  width: 15px;
-  height: 15px;
-  background-color: #333;
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
-
 /* Large screen styles */
 
 @media screen and (min-width: 900px) {
   article.post h2 a:hover:after {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     top: 1rem;
     left: -2rem;
     width: 20px;
