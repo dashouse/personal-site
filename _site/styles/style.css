@@ -9,8 +9,17 @@ html {
 body {
   background-image: url('../img/full_tile.jpg');
   background-repeat: repeat;
-  border: 2rem solid #333;
+  border: 1.5rem solid #333;
 }
+
+/* Medium screen styles */
+
+@media screen and (min-width: 400px) {
+  body {
+    border-width: 2rem;
+  }
+}
+
 
 /* Large screen styles */
 
