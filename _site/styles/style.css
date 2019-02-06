@@ -54,7 +54,7 @@ body {
   padding: 0 2rem;
   font-family: 'Vollkorn', serif;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.45;
   background-color: #fefefe;
 }
 
@@ -71,7 +71,6 @@ body {
 @media screen and (min-width: 900px) {
   body {
     padding: 0 3rem;
-    line-height: 1.6;
   }
 }
 
@@ -178,12 +177,12 @@ h4 {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 p + h2,
 p + h3,
 p + h4 {
-  padding-top: 1.5rem;
+  padding-top: 2rem;
 }
 
 p span.small-caps {
