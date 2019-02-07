@@ -196,24 +196,13 @@ aside p {
 
 a:link {
   color: #3d99a3;
-  text-decoration: none;
-  border-bottom: 1px solid #3d99a3;
-  transition: border-bottom 0.1s ease-in, color 0.1s ease-in;
-}
-
-p a:link, ul.contact-list li a {
-  display: inline-block;
-  line-height: 0.78;
-  text-shadow:
-    2px 2px white,
-    2px -2px white,
-    -2px 2px white,
-    -2px -2px white;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #333;
-  border-bottom: 2px solid #3d99a3;
+  background-color: #c9e064;
+  text-shadow: 1px 1px white;
 }
 
 a:visited {
@@ -225,8 +214,10 @@ a:visited:hover {
 }
 
 span.title a:link, h2 a:link {
-  border-bottom: 0px;
+  text-decoration: none;
   transition: color 0s linear;
+  background-color: transparent;
+  text-shadow: none;
 }
 
 ul.contact-list {
@@ -274,7 +265,7 @@ span.back-link a {
 span.back-link:hover:before {
   content: "";
   position: absolute;
-  top: 9px;
+  top: 6px;
   left: -24px;
   display: block;
   height: 16px;
@@ -282,6 +273,14 @@ span.back-link:hover:before {
   background-color: #333;
   -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+/* Large screen styles */
+
+@media screen and (min-width: 500px) {
+  span.back-link:hover:before {
+    top: 9px;
+  }
 }
 
 mark {
@@ -483,8 +482,8 @@ article.post {
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   position: relative;
-  margin-bottom: 6rem;
-  padding: 5rem 0 0 0;
+  margin-bottom: 5rem;
+  padding: 4rem 0 0 0;
   border-top: 10px solid #333;
   transform: rotate(-6deg) translateY(0%) skewX(-6deg);
 }
@@ -494,6 +493,7 @@ article.post {
 @media screen and (min-width: 900px) {
   article.post {
     padding: 6rem 0 0 0;
+    margin-bottom: 5rem;
   }
 }
 
@@ -596,7 +596,7 @@ article.post.post--external h2:after {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   display: inline-block;
-  top: -0.5rem;
+  top: -0.2rem;
   left: 0;
   padding: 0.3rem 0.6rem;
   color: #3d99a3;
@@ -649,7 +649,7 @@ article.post.post--external h2:after {
 .main.main--post .lede-block {
   margin-top: 4rem;
   margin-bottom: 6rem;
-  padding: 5rem 0 3rem 0;
+  padding: 4rem 0 2rem 0;
   border-top: 10px solid #333;
   border-bottom: 2px solid #333;
   transform: rotate(-6deg) translateY(0%) skewX(-6deg);
@@ -697,6 +697,7 @@ article.post.post--external h2:after {
 .main.main--post img {
   display: block;
   max-width: 100%;
+  height: auto;
   margin: 2rem auto;
 }
 
