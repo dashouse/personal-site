@@ -646,6 +646,18 @@ article.post.post--external h2:after {
   }
 }
 
+.main.main--post h1 {
+  font-size: 2.5rem;
+}
+
+/* Large screen styles */
+
+@media screen and (min-width: 900px) {
+  .main.main--post h1 {
+    font-size: 4rem;
+  }
+}
+
 .main.main--post .lede-block {
   margin-top: 4rem;
   margin-bottom: 6rem;
