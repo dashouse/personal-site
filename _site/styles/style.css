@@ -262,24 +262,20 @@ span.back-link a {
   transition: none;
 }
 
-span.back-link:hover:before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -24px;
-  display: block;
-  height: 16px;
-  width: 16px;
-  background-color: #333;
-  -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-}
-
 /* Large screen styles */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   span.back-link:hover:before {
+    content: "";
+    position: absolute;
     top: 9px;
+    left: -24px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: #333;
+    -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   }
 }
 
