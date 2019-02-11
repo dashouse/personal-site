@@ -1,9 +1,10 @@
 ---
-title: Test
+title: The Amen Break is the ultimate design pattern
 layout: layout.njk
 post: true
 markdown: true
 ---
+<span class="back-link"><a href="../../index.html">Back home</a></span>
 
 # The ‘Amen break’ is the ultimate design pattern
 
