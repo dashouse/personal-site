@@ -10,8 +10,8 @@ markdown: true
 <p class="post-date">Originally posted on 1st September 2016</p>
 
 <div class="lede-block">
-    <p class="lede">Back in the late 60s [Gregory Sylvester “G. C.”
-Coleman](https://en.wikipedia.org/wiki/Gregory_C._Coleman), the drummer of
+    <p class="lede">Back in the late 60s <a href="https://en.wikipedia.org/wiki/Gregory_C._Coleman">Gregory Sylvester “G. C.”
+Coleman</a>, the drummer of
 Washington DC funk and soul band The Winstons recorded a drum interlude that
 changed the world.&hellip;</p>
 </div>
@@ -25,7 +25,11 @@ the backdrop to thousands of tracks and define entire genre of music.
 The YouTube link below will drop you into ‘Amen, brother’ at 1:26. At the point
 of reading this you either already know what you’re going to hear or you don’t.
 
-<span class="figcaption_hack">The Winstons ‘Amen, Brother’ — Starting just before the ‘Amen break’</span>
+<div class="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GxZuq57_bYM?start=86" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p class="caption">The Winstons ‘Amen, Brother’ — Starting just before the ‘Amen break’</p>
 
 Stemming from breakbeat hardcore, hip-hop, reggae and ragga influences in early
 90s rave culture, drum & bass, jungle and breakcore would be somewhat defined by
@@ -57,7 +61,11 @@ break’ but it’s not as immediately recognisable as in some other tracks of t
 time. On the track ‘Keep it going now’ by Rob Base & DJ EZ Rock you can really
 hear the pitch of that trademark snare drum cutting through the mix.
 
-<span class="figcaption_hack">Keep it going now’ by Rob Base & DJ EZ Rock</span>
+<div class="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rbS6v6sf1do?start=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>    
+
+<p class="caption">Keep it going now’ by Rob Base & DJ EZ Rock</p>
 
 ### Drum and bass and beyond
 
@@ -74,13 +82,25 @@ Many of these tracks retain the core trademark sound of the original but put it
 together in such different ways, using the break has become somewhat of an art
 form in itself.
 
-<span class="figcaption_hack">Legendary producer Bizzy B has a YouTube video dedicated to chopping the ‘Amen
-break’</span>
+<div class="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2CqyE8gru7s?start=529" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-<span class="figcaption_hack">Shy FX’s ‘Original Nuttah’ uses a cut up version of the break</span>
+<p class="caption">Legendary producer Bizzy B has a YouTube video dedicated to chopping the ‘Amen
+break’</p>
 
-<span class="figcaption_hack">Venetian Snares’ — ‘Szamar madar’ orchestral breakcore masterpiece uses a
-heavily cut up amen break</span>
+<div class="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3QMiCBJ7yRM?start=64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p class="caption">Shy FX’s ‘Original Nuttah’ uses a cut up version of the break</p>
+
+<div class="embed-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_fX4qoruQik?start=151" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p class="caption">Venetian Snares’ — ‘Szamar madar’ orchestral breakcore masterpiece uses a
+heavily cut up amen break</p>
 
 ### How does this relate to design patterns?
 
@@ -104,11 +124,12 @@ Frontend](https://github.com/alphagov/govuk-frontend) in the newly released [NHS
 Frontend](https://nhsuk.github.io/nhsuk-frontend/pages/examples.html). They kept
 the bits that worked for them and changed the things that didn’t.
 
-<span class="figcaption_hack">An example of the checkboxes component on GOV.UK Frontend (left) and NHS
-Frontend (right)</span>
+<img src="gds-nhs.png" alt="a comparison showing the similarity between the GOV.UK Design System checkboxes component and the NHS checkboxes component">
 
-#### Patterns can be adapted based on the use case, just like samples can be modified
-for different genres
+<p class="caption">An example of the checkboxes component on GOV.UK Frontend (left) and NHS
+Frontend (right)</p>
+
+#### Patterns can be adapted based on the use case, just like samples can be modified for different genres
 
 One of the most common push backs on design system’s and design patterns is that
 they can be seen to limit a designer’s creativity or contain overly generic
@@ -132,23 +153,3 @@ Amen.
 for some track inspiration
 * [https://en.wikipedia.org/wiki/Amen_break](https://en.wikipedia.org/wiki/Amen_break)
 for some of the specific details
-
-* [Music](https://uxdesign.cc/tagged/music?source=post)
-* [Design Patterns](https://uxdesign.cc/tagged/design-patterns?source=post)
-* [Design Systems](https://uxdesign.cc/tagged/design-systems?source=post)
-* [Amen Break](https://uxdesign.cc/tagged/amen-break?source=post)
-* [UX](https://uxdesign.cc/tagged/ux?source=post)
-
-### [Dave House](https://uxdesign.cc/@davehouse_80809)
-
-Interaction Designer at GDS
-[www.twitter.com/iknowdavehouse](http://www.twitter.com/iknowdavehouse)
-
-### [UX Collective](https://uxdesign.cc/?source=footer_card)
-
-We believe designers are thinkers as much as they are makers. So we curate UX
-stories we’ve always wanted to read. By
-[@fabriciot](https://medium.com/@fabriciot) and
-[@caioab](https://medium.com/@caioab).
-
-

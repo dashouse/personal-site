@@ -172,7 +172,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -197,6 +197,7 @@ aside p {
 a:link {
   color: #3d99a3;
   text-decoration: underline;
+  word-wrap: break-word;
 }
 
 a:hover {
@@ -249,7 +250,6 @@ ul.contact-list li {
     content: "";
   }
 }
-
 
 span.back-link {
   display: inline-block;
@@ -735,6 +735,13 @@ article.post.post--external h2:after {
   color: #e0646f;
 }
 
+.caption {
+  font-size: 1.1rem;
+  color: #666666;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 .alert {
   border: 5px solid #333;
   padding: 1rem;
@@ -747,6 +754,26 @@ article.post.post--external h2:after {
 
 .alert *:last-child {
   margin-bottom: 0;
+}
+
+/* video */
+
+.embed-container { 
+  position: relative; 
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%;
+} 
+  
+.embed-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Egg */
