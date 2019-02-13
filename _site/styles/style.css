@@ -10,6 +10,7 @@ body {
   background-image: url('../img/full_tile.jpg');
   background-repeat: repeat;
   border: 1.5rem solid #333;
+  border-top: 0;
 }
 
 /* Medium screen styles */
