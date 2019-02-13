@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="styles/style.css" />
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC|Vollkorn:400,400i,700|Poppins:600,800" rel="stylesheet">
+    {% if post %}
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
+    {% else %}
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    {% endif %}
     <title>{{ title }}</title>
   </head>
   <body class="{{ bodyClass }}" >
