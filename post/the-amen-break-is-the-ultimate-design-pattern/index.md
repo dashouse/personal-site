@@ -14,7 +14,7 @@ markdown: true
     <p class="lede">Back in the late 60s <a href="https://en.wikipedia.org/wiki/Gregory_C._Coleman">Gregory Sylvester “G. C.”
 Coleman</a>, the drummer of
 Washington DC funk and soul band The Winstons recorded a drum interlude that
-changed the world.&hellip;</p>
+changed the world&hellip;</p>
 </div>
 
 The Winstons released the single ‘Color Him Father’ in 1969, however it was the
