@@ -121,6 +121,15 @@ span.title span.hidden {
   }
 }
 
+.highlight {
+  color: #333;
+  background-color: #c9e064;
+  text-shadow: 1px 1px white;
+  box-shadow: #c9e064 0 0 0 1px ;
+  display: inline-block;
+  font-weight: 700;
+}
+
 /* span.title:hover {
   visibility: visible;
   opacity: 1;
@@ -195,8 +204,9 @@ p span.small-caps {
 } */
 
 a:link {
-  color: #3d99a3;
+  color: #307B82;
   text-decoration: underline;
+  text-underline-offset: 3px;
   word-wrap: break-word;
 }
 
@@ -207,7 +217,7 @@ a:hover {
 }
 
 a:visited {
-  color: #3d99a3;
+  color: #307B82;
 }
 
 a:visited:hover {
