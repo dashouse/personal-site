@@ -121,15 +121,6 @@ span.title span.hidden {
   }
 }
 
-.highlight {
-  color: #333;
-  background-color: #c9e064;
-  text-shadow: 1px 1px white;
-  box-shadow: #c9e064 0 0 0 1px ;
-  display: inline-block;
-  font-weight: 700;
-}
-
 /* span.title:hover {
   visibility: visible;
   opacity: 1;
