@@ -1,8 +1,13 @@
 /* Globals */
 
 html {
-  font-size: 100%;
   box-sizing: border-box;
+}
+
+@supports (font: -apple-system-body) and (-webkit-touch-callout: default) {
+  :root {
+    font: -apple-system-body !important;
+  }
 }
 
 
