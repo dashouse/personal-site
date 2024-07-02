@@ -8,6 +8,10 @@ html {
   :root {
     font: -apple-system-body !important;
   }
+
+  body {
+    border: 0.5rem solid #222;
+  }
 }
 
 
