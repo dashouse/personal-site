@@ -1,0 +1,245 @@
+---
+title: Dave House - Learning CSS Grid
+layout: layout.njk
+post: true
+---
+<div class="main main--post" role="main">
+
+        <span class="back-link"><a href="../../index.html">Back home</a></span>
+        <h1>Learning CSS Grid</h1>
+
+        <p class="post-date">Originally posted on 1st September 2016</p>
+
+        <div class="lede-block">
+              <p class="lede">For the first time, the web has a made for purpose layout system. CSS Grid is no doubt the future, here’s what I learned in the first week of using it&hellip;</p>
+        </div>
+
+        <p>I’ve been excited about learning CSS Grid Layout for some months now. After hearing <a title="https://rachelandrew.co.uk" href="https://rachelandrew.co.uk">Rachel Andrew</a> speak about it several times in the past year it really feels like what web designers have been waiting for.</p>
+
+        <p>Before we get into the details, it’s worth saying that this article only skims the surface of what CSS Grid can do. If you’ve never tried it before, you’re going to be surprised how quickly you can put together solid layouts with minimal code.</p>
+
+        <h2>Basic layout</h2>
+
+        <p>There is an extremely low barrier to entry with CSS Grid. Let’s get started with a basic layout such as a Header, Main content area, Sidebar and Footer.</p>
+
+<pre><code>&lt;<span class="html">div</span> class="<span class="class">wrapper</span>"&gt;
+  &lt;<span class="html">header</span>&gt;&lt;/<span class="html">header</span>&gt;
+  &lt;<span class="html">div</span> class="<span class="class">main</span>"&gt;&lt;/<span class="html">div</span>&gt;
+  &lt;<span class="html">div</span> class="<span class="class">sidebar</span>"&gt;&lt;/<span class="html">div</span>&gt;
+  &lt;<span class="html">footer</span>&gt;&lt;/<span class="html">footer</span>&gt;
+&lt;/<span class="html">div</span>&gt;</code></pre>
+
+
+        <p>Without needing to add any presentational markup to the HTML we can create a layout purely in CSS.</p>
+        <p>First define the grid on the parent container:</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+}</code></pre>
+
+        <p>That’s it, you’re now using CSS Grid.</p>
+        <p>Now let’s define the column structure. For this example we'll use 2 columns, 600px column on the left, next to a 300px column on the right:</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: 600px 300px;
+}
+</code></pre>
+
+        <p>Rows can be defined in the same way but for this example we can use auto. This will create the rows we need for us:</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: 600px 300px;
+  grid-template-rows: auto auto;
+}
+</code></pre>
+
+        <p>Gutters in CSS Grid are defined by using <code>grid-column-gap</code>, you can set both column gaps and row gaps like so:</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: 600px 300px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+        <h3>Positioning the elements</h3>
+
+        <p>Layout is defined in terms of grid lines, you need to specify a start and end point. For example, for an element to span across 2 columns it needs to start at grid line 1 and end at grid line 3.</p>
+
+        <p>Starting with the header we want to do exactly that, start at grid line 1 and end at gridline 3. Rows work in the same way. Start at row 1 and end at row 2. Collectively this means the header will span 2 columns and 1 row.</p>
+
+<pre><code><span class="html">header</span> {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+</code></pre>
+
+        <p>Our main content area comes next. We want this to span the 600px column but stop before the 300px column. We also want it to be one row below the header.</p>
+
+<pre><code><span class="class">.main</span> {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+</code></pre>
+
+        <p>Now for the sidebar. It needs to start at grid line 2 and end at grid line 3 but sit on the same row as the main content.</p>
+
+<pre><code><span class="class">.main</span> {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+<span class="class">.sidebar</span> {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+</code></pre>
+
+        <p>The footer is much like the header, but we need to set the row so it sits below the main content and sidebar.</p>
+
+<pre><code><span class="html">footer</span> {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+</code></pre>
+
+        <p>The grid we've just made should look something like this:</p>
+
+        <img class="" src="fixed_grid.png" alt="fixed_grid" width="500" height="346" />
+
+        <h2>Fluid grids</h2>
+
+        <p>The above example is great start but it’s unlikely you’ll be using fixed px units for your grid columns.</p>
+
+        <h3>The fr unit</h3>
+
+        <p>Although you can use percentages in CSS Grid there’s a much more suitable unit for the task at hand. Welcome the <a href="http://www.w3.org/TR/2011/WD-css3-values-20110906/#fr-unit">fr</a> <em>(fraction)</em> unit.</p>
+
+        <p>Let’s take the layout we've already created and make it fluid</p>
+
+        <p>We want the main area to be twice the size of the sidebar, we can define this as <code>grid-template-columns: 2fr 1fr</code>.</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+
+        <h3>Mixing it up</h3>
+
+        <p>Something that has always been quite a struggle is mixing fluid and fixed column widths. CSS Grid makes this really simple, you can mix <code>fr</code> and <code>px</code>. In this example let’s make the sidebar fixed at 200px but keep the main content area fluid.</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+        <p>You can add as many fluid or fixed columns as you need. Here we’ll stick with the fixed 200px sidebar and then divide the remaining space into 2 fluid columns, with the second one being one twice the width of the other.</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: 1fr 2fr 200px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+        <p>That would look like this:</p>
+
+        <img class="aligncenter size-full wp-image-464" src="mixed_grid1.png" alt="mixed_grid" width="500" height="346" />
+
+        <h3>What about the 12-col grids I'm used to?</h3>
+
+        <p>As refreshing as it can be to just create a specific grid for your immediate content needs we’re somewhat used to using 12-col grids and spanning columns. The fr unit makes this entirely possible. Rather than adding 12 x 1fr we can use a repeat function. Adding <code>grid-template-columns: repeat(12, 1fr);</code> will “repeat” 1fr 12 times, creating a 12 column grid with each column having an equal width.</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+        <h3>Naming</h3>
+
+        <p>To avoid confusion in your code it can be helpful to name the columns inside a grid container. You can do this by adding the name inside square brackets. I want my columns to be called "col" so this is added like so:</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr);
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+        <p>Now we have a named set of columns we can reference this in CSS for the grid elements themselves like this: <code>grid-column: col 1/2</code>.</p>
+
+        <h3>Spanning columns</h3>
+
+        <p>When positioning elements on a grid like this, rather than specifying the start and end position explicitly we can instead span columns.</p>
+
+        <p>In this example we define the header of starting on column line 1 and spanning 12 columns.</p>
+
+<pre><code><span class="html">header</span> {
+  grid-column: col 1 / span 12;
+  grid-row: 1/2;
+}
+</code></pre>
+
+        <p>If you don’t want to be explicit about the start position and let CSS Grid automatically place your grid items in source order you don’t have to be. Just add the amount of columns you want this element to span.</p>
+
+<pre><code><span class="html">header</span> {
+  grid-column: span 12;
+  grid-row: 1/2;
+}
+</code></pre>
+
+        <h3>Going even further</h3>
+
+        <p>When I worked for Gumtree.com, one problem I encountered often was incorporating fixed width display advertising into complicated fluid layouts. With CSS grid you can use the same concept as our basic example, just because we’re repeating 12 1fr columns doesn’t mean we can't add a fixed with column next to that. I've named this column  “fixed”.</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr) [fixed]300px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}</code></pre>
+
+        <p>This creates a grid that looks like this:</p>
+
+        <img class="aligncenter size-full wp-image-468" src="12colmix.png" alt="12colmix" width="500" height="346" />
+
+
+        <h3>What next</h3>
+
+        <p>Grid becomes even more powerful when you start to mix even more types of units, for example when using <code>minmax()</code> you can control the reflow and the way columns collapse at different sizes without breakpoints.
+          
+        <p>For example <code>grid-template-columns: 1fr minmax(400px, 1fr) 1fr;</code> will create a three-column grid. Each column is <code>1fr</code> wide but the middle column cannot get smaller than 400px. This means, once the middle column hits 400px the outside columns continue to shrink, while the middle remains fixed. Imagine the layout possibilities!</p> 
+        
+        <h3>Browser Support</h3>
+
+        <p>CSS Grid is supported in all major browsers. To support older browsers you can use the feature query <a href="https://developer.mozilla.org/en/docs/Web/CSS/@supports">@supports</a> which is like having Modernizr right there in your CSS.</p>
+
+<pre><code><span class="class">.wrapper</span> {
+  Your float based layout
+}
+
+@supports (display: grid) {
+   <span class="class">.wrapper</span> {
+     Your grid based layout
+   }
+}</code></pre>
+
+        <p>Happy gridding!</p>
+
+</div>

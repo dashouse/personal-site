@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if post %}
+    <link rel="stylesheet" href="../../styles/style.css" />
+    {% else %}
+    <link rel="stylesheet" href="styles/style.css" />
+    {% endif %}
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC|Vollkorn:400,400i,700|Poppins:600,800" rel="stylesheet">
+    {% if post %}
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
+    {% else %}
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    {% endif %}
+    <title>{{ title }}</title>
+  </head>
+  <body class="{{ bodyClass }}" >
+    <div class="l">Hey</div>
+    <div class="r">You</div>
+    <div class="grid">
+        {% include "header.njk" %}           
+          {% if markdown %}
+          <div class="main main--post" role="main">
+            {{ content | safe }}
+          </div>
+          {% else %} 
+          {{ content | safe }}
+          {% endif %}
+        {% include "footer.njk" %}
+    </div>
+  </body>
+</html>
