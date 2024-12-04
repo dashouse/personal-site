@@ -775,7 +775,7 @@ article.post.post--external h2:after {
 .embed-container { 
   position: relative; 
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding-bottom: 56.25%; 
   height: 0; 
   overflow: hidden; 
