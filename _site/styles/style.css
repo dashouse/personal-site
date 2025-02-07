@@ -67,6 +67,10 @@ ol.design_principles {
   margin-bottom: 3rem;
 }
 
+ol.design_principles li {
+  margin-bottom: 1rem;
+}
+
 /* Mid screen styles */
 
 @media screen and (min-width: 700px) {
