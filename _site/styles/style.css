@@ -591,9 +591,6 @@ article.post .meta {
   }
 }
 
-article.post.post--external {
-
-}
 
 article.post.post--external h2:after {
   content: "external link";
