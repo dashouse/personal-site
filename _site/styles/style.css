@@ -16,7 +16,6 @@ body {
   background-repeat: repeat;
   border-top: 0;
   padding-right: 0;
-  overflow: clip;
 }
 
 *, *:before, *:after {
@@ -335,7 +334,7 @@ a:link::selection  {
   grid-column: 1 / 4;
   margin: auto;
   margin-top: -50px;
-  margin-right: -50px;
+  /* margin-right: -50px; */
 }
 
 @media screen and (min-width: 1000px) {
