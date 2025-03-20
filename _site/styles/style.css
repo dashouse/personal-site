@@ -334,16 +334,19 @@ a:link::selection  {
   grid-column: 1 / 4;
   margin: auto;
   margin-top: -50px;
-  /* margin-right: -50px; */
+  margin-right: 0;
+  overflow-x: hidden;
+  
 }
 
 @media screen and (min-width: 1000px) {
   .photo {
+    position: relative;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     margin-top: -50px;
     margin-left: -50px;
-    margin-right: 0;
+    overflow-x: unset;
   }
 }
 
@@ -443,6 +446,15 @@ footer {
   background-position: center top;
   background-color: rgb(32, 177, 194);
   background-blend-mode: multiply;
+  right: -50px;
+}
+
+/* Large screen styles */
+
+@media screen and (min-width: 1000px) {
+  .promo-photo {
+    right: unset;
+  }
 }
 
 iframe.demo {
