@@ -68,7 +68,6 @@ h1, .h1 {
   font-size: 3.8rem;
   margin-bottom: 2rem;
   line-height: 1.15;
-  font-weight: 900;
 }
 
 /* Large screen styles */
@@ -78,7 +77,6 @@ h1, .h1 {
     font-size: 7rem;
     margin-bottom: 2rem;
     line-height: 1.15;
-    font-weight: 800;
   }
 }
 
