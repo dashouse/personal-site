@@ -8,7 +8,9 @@
     {% else %}
     <link rel="stylesheet" href="styles/style.css" />
     {% endif %}
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC|Vollkorn:400,400i,700|Poppins:600,800" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     {% if post %}
     <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
     {% else %}
@@ -17,8 +19,6 @@
     <title>{{ title }}</title>
   </head>
   <body class="{{ bodyClass }}" >
-    <div class="l">Hey</div>
-    <div class="r">You</div>
     <div class="grid">
         {% include "header.njk" %}           
           {% if markdown %}
