@@ -282,7 +282,7 @@ a:link::selection  {
   padding: 0 2rem;
   padding-bottom: 4rem;
   border-bottom: 2px solid currentColor;
-  margin-top: -50px;
+  margin-top: -24px;
 }
 
 @media screen and (min-width: 1000px) {
