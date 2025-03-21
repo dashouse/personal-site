@@ -9,7 +9,7 @@
   --background-aside: rgb(32, 177, 194);
   --focus-outline: #77406C;
   --focus-outline-aside: #fff;
-  --photo-multiply: var(--background-aside);
+  --photo-multiply: rgb(32, 177, 194);
   --highlight-background: #c9e064;
   --highlight-text: var(--text);
 }
@@ -24,7 +24,7 @@
     --background-aside: #260322;
     --focus-outline: #fff;
     --focus-outline-aside: #fff;
-    --photo-multiply: var(--action-foreground);
+    --photo-multiply: #da27bf;
     --highlight-background: #e064d1;
     --highlight-text: #111;
   }
