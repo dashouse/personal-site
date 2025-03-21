@@ -390,7 +390,6 @@ footer {
 /* Images */
 
 .promo-photo {
-  -webkit-transform: translate3d(0, 0, 0);
   position: relative;
   width: 300px;
   height: 300px;
@@ -401,7 +400,6 @@ footer {
   background-blend-mode: multiply;
   background-color: rgb(32, 177, 194);
   right: -50px;
-  border: 1px solid transparent;
 }
 
 @media (prefers-color-scheme: dark) {
