@@ -4,7 +4,6 @@
   --text-color: #222;
   --action-foreground: #307B82;
   --canvas: #fefefe;
-  --canvas-img: ../img/full_tile.jpg;
   --background-aside: rgb(32, 177, 194);
   --focus-outline: #77406C;
   --focus-outline-aside: #fff;
@@ -37,7 +36,7 @@ html {
 
 body {
   background-color: var(--canvas);
-  background-image: url('var(--canvas-img)');
+  background-image: url('../img/full_tile.jpg');
   background-repeat: repeat;
   border-top: 0;
   padding-right: 0;
