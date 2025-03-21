@@ -1,3 +1,27 @@
+/* Variables */
+
+:root {
+  --text-color: #222;
+  --action-foreground: #307B82;
+  --canvas: #fefefe;
+  --canvas-img: ../img/full_tile.jpg;
+  --background-aside: rgb(32, 177, 194);
+  --focus-outline: #77406C;
+  --focus-outline-aside: #fff;
+}
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fafafa;
+    --action-foreground: #307B82;
+    --canvas: #111;
+    --canvas-img: ;
+    --background-aside: rgb(32, 177, 194);
+    --focus-outline: #ec62d0;
+    --focus-outline-aside: #fff;
+  }
+} */
+
 /* Globals */
 
 html {
@@ -12,13 +36,13 @@ html {
 
 
 body {
-  background-color: #fefefe;
-  background-image: url('../img/full_tile.jpg');
+  background-color: var(--canvas);
+  background-image: url('var(--canvas-img)');
   background-repeat: repeat;
   border-top: 0;
   padding-right: 0;
   font-size: 1.7rem;
-  color: #222;
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -113,28 +137,28 @@ strong {
 
 
 a:link {
-  color: #307B82;
+  color: var(--action-foreground);
   text-decoration: underline;
   text-underline-offset: 3px;
   word-wrap: break-word;
 }
 
 a:hover {
-  color: #222;
+  color: var(--text-color);
   background-color: #c9e064;
   text-shadow: 1px 1px white;
 }
 
 a:visited {
-  color: #307B82;
+  color: var(--action-foreground);
 }
 
 a:visited:hover {
-  color: #222;
+  color: var(--text-color);
 }
 
 a:focus {
-  outline: 3px solid #77406C;
+  outline: 3px solid var(--focus-outline);
   outline-offset: 3px;
   transition: 0.2s;
 }
@@ -298,7 +322,7 @@ a:link::selection  {
 }
 
 .secondary {
-  background-color: rgb(32, 177, 194);
+  background-color: var(--background-aside);
   padding: 2rem;
   grid-row: 4 / 5;
   grid-column: 1 / 4;
@@ -364,7 +388,7 @@ footer {
   background: url('../img/dh_promo.jpg');
   background-size: 150%;
   background-position: center top;
-  background-color: rgb(32, 177, 194);
+  background-color: var(--background-aside);
   background-blend-mode: multiply;
   right: -50px;
 }
