@@ -397,16 +397,16 @@ footer {
   background: url('../img/dh_promo.jpg');
   background-size: 150%;
   background-position: center top;
-  background-color: rgb(32, 177, 194);
   background-blend-mode: multiply;
+  background-color: rgb(32, 177, 194);
   right: -50px;
   border: 1px solid transparent;
 }
 
 @media (prefers-color-scheme: dark) {
   .promo-photo {
-    background-color: #da27bf;
     background-blend-mode: multiply;
+    background-color: #da27bf;
   }
 }
 
