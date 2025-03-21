@@ -1,25 +1,34 @@
 /* Variables */
 
 :root {
-  --text-color: #222;
+  --text: #222;
   --action-foreground: #307B82;
+  --action-foreground-hover: var(--text);
   --canvas: #fefefe;
+  --background-img: url('../img/full_tile.jpg');
   --background-aside: rgb(32, 177, 194);
   --focus-outline: #77406C;
   --focus-outline-aside: #fff;
+  --photo-multiply: var(--background-aside);
+  --highlight-background: #c9e064;
+  --highlight-text: var(--text);
 }
-/* 
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #fafafa;
-    --action-foreground: #307B82;
-    --canvas: #111;
-    --canvas-img: ;
-    --background-aside: rgb(32, 177, 194);
-    --focus-outline: #ec62d0;
+    --text: #f1f1f1;
+    --action-foreground: #da27bf;
+    --action-foreground-hover: #222;
+    --canvas: #140814;
+    --background-img: none;
+    --background-aside: #260322;
+    --focus-outline: #fff;
     --focus-outline-aside: #fff;
+    --photo-multiply: var(--action-foreground);
+    --highlight-background: #e064d1;
+    --highlight-text: #111;
   }
-} */
+}
 
 /* Globals */
 
@@ -36,12 +45,12 @@ html {
 
 body {
   background-color: var(--canvas);
-  background-image: url('../img/full_tile.jpg');
+  background-image: var(--background-img);
   background-repeat: repeat;
   border-top: 0;
   padding-right: 0;
   font-size: 1.7rem;
-  color: var(--text-color);
+  color: var(--text);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -135,25 +144,29 @@ strong {
 }
 
 
-a:link {
+a, a:link, a:visited {
   color: var(--action-foreground);
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-color: var(--action-foreground);
   word-wrap: break-word;
 }
 
-a:hover {
-  color: var(--text-color);
-  background-color: #c9e064;
-  text-shadow: 1px 1px white;
+.secondary a, .secondary a:visited  {
+  color: var(--text);
+  text-decoration-color: var(--text);
+ }
+
+a:hover, a:visited:hover {
+  color: var(--action-foreground-hover);
+  background-color: var(--highlight-background);
+  text-decoration-color: var(--action-foreground-hover);
 }
 
-a:visited {
-  color: var(--action-foreground);
-}
-
-a:visited:hover {
-  color: var(--text-color);
+@media (prefers-color-scheme: dark) { 
+  a:hover {
+    text-shadow: none;
+  }
 }
 
 a:focus {
@@ -191,20 +204,14 @@ ul.contact-list li {
   }
 }
 
-mark {
-  background-color: #c9e064;
-}
-
 *::selection { 
-  background-color: #c9e064;
-  text-shadow: 1px 1px white;
+  background-color: var(--highlight-background);
+  color: var(--highlight-text);
 }
 
 a:link::selection  { 
   border: 0;
-  color: #fff;
-  background-color: #222;
-  text-shadow: none;
+  color: var(--highlight-text);
 }
 
 /* Layout */
@@ -320,6 +327,13 @@ a:link::selection  {
   align-self: start;
 }
 
+@media (prefers-color-scheme: dark) {
+  .brands svg, .brands svg path {
+    fill: currentColor !important;
+  }
+}
+
+
 .secondary {
   background-color: var(--background-aside);
   padding: 2rem;
@@ -334,10 +348,6 @@ a:link::selection  {
     grid-row: 1 / 5;
     grid-column: 3 / 4;
   } 
-}
-
-.secondary a  {
- color: currentColor;
 }
 
 .secondary a:focus {
@@ -387,9 +397,10 @@ footer {
   background: url('../img/dh_promo.jpg');
   background-size: 150%;
   background-position: center top;
-  background-color: var(--background-aside);
+  background-color: var(--photo-multiply);
   background-blend-mode: multiply;
   right: -50px;
+  border: 1px solid transparent;
 }
 
 /* Large screen styles */
@@ -439,10 +450,4 @@ iframe.demo {
   font-size: 1.2rem;
   display: block;
   margin-top: 0.5rem;
-}
-
-.highlight {
-  color: #222;
-  background-color: #c9e064;
-  text-shadow: 1px 1px white;
 }
