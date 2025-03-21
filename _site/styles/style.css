@@ -390,6 +390,7 @@ footer {
 /* Images */
 
 .promo-photo {
+  -webkit-transform: translate3d(0, 0, 0);
   position: relative;
   width: 300px;
   height: 300px;
