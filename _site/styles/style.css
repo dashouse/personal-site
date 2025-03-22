@@ -140,9 +140,8 @@ p + h4 {
 }
 
 strong {
-  font-weight: 800;
+  font-weight: 700;
 }
-
 
 a, a:link, a:visited {
   color: var(--action-foreground);
@@ -252,6 +251,11 @@ a:link::selection  {
 
 .header p:last-child {
   margin-bottom: 0;
+}
+
+.header .back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
 .main {
@@ -456,4 +460,28 @@ iframe.demo {
   font-size: 1.2rem;
   display: block;
   margin-top: 0.5rem;
+}
+
+/* Studies */
+
+.study ul {
+  margin: 0;
+  padding: 0 0 0 1.4rem;
+  list-style-position: outside; 
+}
+
+.study ul li {
+  margin-bottom: 1.5rem; 
+  padding-left: 1rem;
+}
+
+ul.link-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+ul.link-list li {
+  padding-left: 0;
+  margin-bottom: 1rem; 
 }
