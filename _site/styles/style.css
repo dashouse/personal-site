@@ -135,7 +135,9 @@ p {
 }
 p + h2,
 p + h3,
-p + h4 {
+p + h4,
+ul + h2,
+ul + h3 {
   padding-top: 2rem;
 }
 
@@ -211,6 +213,23 @@ ul.contact-list li {
 a:link::selection  { 
   border: 0;
   color: var(--highlight-text);
+}
+
+figcaption {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+/* Images */
+
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid currentColor;
+  margin: 2rem 0 3rem 0;
 }
 
 /* Layout */
