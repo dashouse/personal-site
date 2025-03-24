@@ -381,6 +381,15 @@ img {
   font-size: 1rem;
 }
 
+.callout {
+  padding: 2rem;
+  border: 12px solid currentColor;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  margin: 3rem 0 ;
+}
+
 footer {
   grid-row: 5 / 6;
   grid-column: 1 / 4;
