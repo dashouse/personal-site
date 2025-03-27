@@ -382,12 +382,20 @@ img {
 }
 
 .callout {
-  padding: 2rem;
+  padding: 1rem;
   border: 12px solid currentColor;
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-right-width: 1px;
   margin: 3rem 0 ;
+}
+
+/* Large screen styles */
+
+@media screen and (min-width: 1000px) {
+  .callout {
+    padding: 2rem;
+  }
 }
 
 footer {
