@@ -6,17 +6,13 @@ h1: BT Loop Design System
 ---
 
 <div class="photo">
-
   <div class="promo-photo"></div>
-
 </div>
-
 
 <div class="main study" role="main">
 
     <p><strong>Product Design Lead (Design System)</strong></p>
     <p>March 2020 – November 2021</p>
-
 
     <img src="/img/multibrand.jpg" alt="a screenshot of four buttons, one unstyled with the remainder in their branding of BT, EE and Plusnet">
 
@@ -26,45 +22,110 @@ h1: BT Loop Design System
 
     <p><strong>Just so you know:</strong> This case study is intentionally limited in scope because the design system is not public.</p>
 
-
     <div class="callout">
-
       <h2>Big wins (for the team):</h2>
       <ul>
         <li>
-            Created a headless design system that retained the individuality and personality of each BT brand (BT, EE, Plusnet)
+            Created a headless design system that retained the individuality and personality of each BT brand (BT, EE, Plusnet).
         </li>
         <li>
-            Migrated hundreds of designers and engineers to a brand new system and ways of working
+            Migrated hundreds of designers and engineers to a brand new system and ways of working.
         </li>
         <li>
-            Used the Design System to connect previously siloed areas of the organisation
+            Used the Design System to connect previously siloed areas of the organisation.
         </li>
         <li>
-            Developed a community “component blueprints” library as a way to share and iterate on component and pattern design before design system contribution
+            Developed a community “component blueprints” library as a way to share and iterate on component and pattern design before design system contribution.
         </li>
         <li>
-            As an Accessibility Guild member, I increased knowledge of accessible interface design within the design community
+            As an Accessibility Guild member, I increased knowledge of accessible interface design within the design community.
         </li>
       </ul>
-
     </div>
 
-    <p>Full case study coming soon&hellip;</p>
+    <h2>The background</h2>
+
+    <p>The BT brand had just been revitalised. EE had a design system but it had become bloated. Plusnet, an acquisition, was operating well as its own separate entity.</p>
+    
+    <p>The technical landscape was wide, and the organisation was siloed between commercial and retail as well as design and technology.</p>
+
+    <p>The organisation required certain things from the system which shaped the direction:</p>
+
+    <ul>
+      <li>Each brand was truly unique - The system had to allow for stylistic independence of each theme.</li>
+      <li>It must technically be able to support React, Vanilla HTML/CSS, and Web Components.</li>
+      <li>Common patterns, behaviour, and structure should be unified.</li>
+      <li>Consumers of the system in each organisation should feel like it’s been built for them.</li>
+      <li>Unlike a lot of multi-brand systems, it was not hugely important to be able to switch any customer journey to a different brand instantly.</li>
+    </ul>
+
+    <h2>The process</h2>
+
+    <p>At the start of this journey, I worked a lot with <a href="https://measured.co">Measured</a>. Collectively, the team came up with a design system approach that balanced the needs of the brand and the organisation's technical strategy:</p>
+
+    <ul>
+      <li>Components having a universal "Behavioural API" and a brand-specific "Style API".</li>
+      <li>React would be a build tool for HTML.</li>
+      <li>Styling would be handled by vanilla CSS.</li>
+      <li>There would be a mix of universal and brand-specific tokens.</li>
+    </ul>
+
+    <p>Let’s dig into a few of those things a bit deeper.</p>
+
+    <h3>Behavioural API and Style API</h3>
+
+    <p>The concept was to do something similar to what we might now call a "headless" component. The HTML structure, the props that control the technical and functional concerns, and any common variants would all be handled on a base, unstyled component.</p>
+
+    <p>The Style API would extend the base component and add brand-specific props. For example, this meant rather than abstracting colours and weights in props like "brand-1", we could be more literal and descriptive like "yellow".</p>
+    
+    <p>Doing this meant the organisation got the benefit of shared structure and functional behaviour, while consumers of the system in each brand felt like it was designed just for them.</p>
+
+    <h3>React as a build tool with CSS</h3>
+
+    <p>The organisation used React as their frontend library of choice for customer journeys and accounts. This wasn’t something we could influence, but we could make it more universal.</p>
+
+    <p>Because the system needed to support React, AEM (HTL) templates, Web Components, and more, we used React as a way to define the scope of the component and what styles should be applied in each configuration. Rather than using a CSS-in-JS approach, we opted for Vanilla CSS with semantic classes.</p>
+
+    <p>This meant, while a product team building a React application could use the components directly, there was always an option to use the transformed HTML and CSS directly or as a way to template in other languages.</p>
+
+    <h2>Setting up the foundations</h2>
+
+    <p>As with any design system, we needed to understand the needs of each theme, where they cross over and where they need to be different.</p>
+
+    <p>We ran audits of the usual suspects: typography, colour, spacing, and layout, to define the requirements for each theme.</p>
 
     <figure>
         <img src="/img/bt_typography.png" alt="A work in progress design file working out the typographic relationships and needs of each BT brand">
-        <figcaption>Working out the typographic relationships and needs of each BT brand</figcaption>
+        <figcaption>Working out the typographic relationships and needs of each BT brand.</figcaption>
+    </figure>
+
+    <h2>Bringing accessibility to the forefront</h2>
+
+    <p>During the audit, we found that although some areas of engineering were mature accessibility-wise, we needed to dig into the design of a lot of foundational elements to make sure they had adequate focus indicators and met WCAG 2.1 Non-text contrast.</p>
+
+    <p>This meant essentially redesigning all focus states for all brands, based on the varying colour combinations.</p>
+
+    <figure>
+      <img src="/img/focuswip.png" alt="A messy WIP file, looking at how the individual needs of each brand affected the design of focus indicators. The examples show lots of UI elements on various colour backgrounds">
+      <figcaption>A messy WIP file, looking at how the individual needs of each brand affected the design of focus indicators.</figcaption>
     </figure>
 
     <figure>
         <img src="/img/focusbt.jpg" alt="A screenshot of UI library platform Storybook showing the focus states of multiple inputs">
-        <figcaption>Designing focus states for multiple UI elements</figcaption>
+        <figcaption>The finished focus states for multiple UI elements in the BT theme.</figcaption>
     </figure>
 
+    <h2>Community mindset</h2>
+
+    <p>If you have a design system for more than a day, consumers will ask how they can contribute to it. The reality of this is extremely complex. One of the original problems we were trying to solve was related to the effects of bloat from contribution being a requirement of the previous system.</p>
+
+    <p>We set up a community components library, a place to share work and be the proving ground for new designs. The expectation was that we could solve 90% of the issues relating to duplication of effort, encourage debate and awareness of similar work, while not affecting the integrity of the central system.</p>
+
+    <p>This is a model that has since been adopted by multiple organisations, and something I've taken with me elsewhere.</p>
+
     <figure>
-        <img src="/img/communitycomponents.png" alt="An illustration showing the relationship between the design systems outward delivery and community components' part in the design system's wider ecosystem">
-        <figcaption>An illustration showing the relationship between the design system's outward delivery and community components' part in the design system's wider ecosystem</figcaption>
+        <img src="/img/communitycomponents.png" alt="An illustration showing the relationship between the design system's outward delivery and community components' part in the design system's wider ecosystem">
+        <figcaption>An illustration showing the relationship between the design system's outward delivery and community components' part in the design system's wider ecosystem.</figcaption>
     </figure>
 </div>
 
